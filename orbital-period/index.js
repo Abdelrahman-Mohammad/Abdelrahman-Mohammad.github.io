@@ -61,7 +61,6 @@ var funFactsList = [
   "Sunlight takes about 8 minutes to travel from the Sun and reach Earth",
   "Mercury is the second densest planet in the solar system, after Earth",
 ];
-console.log(funFactsList.length);
 
 // Inputs variables
 var inputOrbits;
@@ -86,13 +85,44 @@ document.getElementById("calculate_button").addEventListener("click", function (
   }
 });
 
+// changeBackground function
+function changeBackground(planet) {
+  var element = document.getElementById("body");
+
+  if (planet.toLocaleLowerCase().includes("mercury")) {
+    element.style.backgroundImage = "url(./mercury_background.jpg)";
+  }
+  if (planet.toLocaleLowerCase().includes("venus")) {
+    element.style.backgroundImage = "url(./venus_background.jpg)";
+  }
+  if (planet.toLocaleLowerCase().includes("earth")) {
+    element.style.backgroundImage = "url(./earth_background.jpg)";
+  }
+  if (planet.toLocaleLowerCase().includes("mars")) {
+    element.style.backgroundImage = "url(./mars_background.jpg)";
+  }
+  if (planet.toLocaleLowerCase().includes("jupiter")) {
+    element.style.backgroundImage = "url(./jupiter_background.jpg)";
+  }
+  if (planet.toLocaleLowerCase().includes("saturn")) {
+    element.style.backgroundImage = "url(./saturn_background.jpg)";
+  }
+  if (planet.toLocaleLowerCase().includes("uranus")) {
+    element.style.backgroundImage = "url(./uranus_background.jpg)";
+  }
+  if (planet.toLocaleLowerCase().includes("neptune")) {
+    element.style.backgroundImage = "url(./neptune_background.jpg)";
+  }
+}
+
 // Dropdown menu change event
 document.getElementById("input_planet").addEventListener("change", function () {
   inputOrbits = getText("input_orbits");
   inputPlanet = getText("input_planet");
+  changeBackground(inputPlanet);
   if (!isNaN(inputOrbits) && inputOrbits > 0) {
     hideElement("error");
-    setText("fun_fact_text", funFactsList[randomNumber(0, 8)]);
+    setText("fun_fact_text", funFactsList[randomNumber(0, 21)]);
     calculator(inputOrbits, inputPlanet);
   }
 });

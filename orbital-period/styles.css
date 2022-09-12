@@ -20,9 +20,14 @@ body {
   height: 100vh;
   font-family: "Rubik", sans-serif;
   color: var(--paragraph);
-  background-image: url(./background_img.jpg);
+  background-image: url(./earth_background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -206,4 +211,15 @@ body {
   color: var(--button);
   font-weight: 500;
   font-size: 14px;
+}
+
+.made-by {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.made-by a {
+  color: var(--button);
 }

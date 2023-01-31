@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+  --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--very-dark-blue);
+  background-image: url("./images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  font-size: 14px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 200px;
+  width: auto;
+  gap: 2rem;
+  position: relative;
+}
+
+.upload-container {
+  padding: 40px;
+  border-radius: 8px;
+  border-top-right-radius: 100px;
+  background-color: var(--dark-blue);
+  width: 350px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upload-buttons {
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upload-button {
+  background-color: var(--very-dark-blue);
+  border-radius: 8px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.upload-button:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: translateY(-3px);
+  transition: all 0.2s;
+}
+
+.usage-left-popup {
+  position: absolute;
+  right: 2.5rem;
+  top: 0;
+  background-color: white;
+  width: 50%;
+  width: 10rem;
+  height: 4.5rem;
+  z-index: 2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-bottom-right-radius: 0;
+}
+
+.usage-left-popup p {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--grayish-blue);
+  text-align: center;
+}
+
+.usage-left-popup p strong {
+  font-size: 2rem;
+  color: black;
+  margin-right: 0.5rem;
+}
+
+.usage-left-popup::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  right: 0;
+  bottom: -1.5rem;
+  border-top: 1.5rem solid white;
+  border-left: 1.5rem solid transparent;
+}
+
+.usage-container {
+  background-color: var(--dark-blue);
+  width: 32rem;
+  border-radius: 0.5rem;
+  height: 75%;
+  position: relative;
+  padding: 2.5rem;
+}
+
+.used-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--pale-blue);
+}
+
+.used-text strong {
+  font-weight: 700;
+}
+
+.usage-bar {
+  width: 100%;
+  height: 1rem;
+  background-color: var(--very-dark-blue);
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.usage-bar .bar {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 81.5%;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 0.8rem;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bar .ball {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+  border-radius: 5px;
+}
+
+.usage-bar::after {
+  content: "1000 GB";
+  color: var(--pale-blue);
+  position: absolute;
+  right: 0;
+  bottom: -1.2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.usage-bar::before {
+  content: "0 GB";
+  color: var(--pale-blue);
+  position: absolute;
+  left: 0;
+  bottom: -1.2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 2;
+}

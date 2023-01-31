@@ -73,6 +73,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid white;
+  transition: all 0.2s;
 }
 
 .section .button p {
@@ -87,4 +89,15 @@ body {
 }
 .section:nth-child(3) .button p {
   color: hsl(179, 100%, 13%);
+}
+
+.button:hover {
+  border: 2px solid white;
+  background-color: transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.button:hover p {
+  color: white !important;
 }

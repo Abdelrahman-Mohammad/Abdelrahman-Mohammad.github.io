@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.wrapper {
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  width: 33.3%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px;
+}
+
+.section:nth-child(1) {
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.section:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.section:nth-child(3) {
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.section .title {
+  font-size: 50px;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: hsl(0, 0%, 95%);
+  margin: 35px 0;
+}
+
+.section .description {
+  font-size: 16px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 35px;
+  flex-grow: 1;
+}
+
+.section .button {
+  background-color: hsl(0, 0%, 95%);
+  margin-right: 70px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section .button p {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.section:nth-child(1) .button p {
+  color: hsl(31, 77%, 52%);
+}
+.section:nth-child(2) .button p {
+  color: hsl(184, 100%, 22%);
+}
+.section:nth-child(3) .button p {
+  color: hsl(179, 100%, 13%);
+}

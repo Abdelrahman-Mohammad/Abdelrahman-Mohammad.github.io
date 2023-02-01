@@ -138,6 +138,7 @@ body {
 .usage-bar {
   width: 100%;
   height: 1rem;
+  border: 2px solid var(--very-dark-blue);
   background-color: var(--very-dark-blue);
   margin-top: 1rem;
   border-radius: 0.5rem;
@@ -147,12 +148,9 @@ body {
 }
 
 .usage-bar .bar {
-  position: absolute;
-  top: 2px;
-  left: 2px;
   width: 81.5%;
   background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-  height: 0.8rem;
+  height: 100%;
   border-radius: 0.75rem;
   display: flex;
   justify-content: flex-end;
@@ -187,4 +185,41 @@ body {
   font-size: 0.8rem;
   font-weight: 700;
   z-index: 2;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url("./images/bg-mobile.png");
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    margin: 0 2rem;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .upload-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  .usage-left-popup {
+    top: 95%;
+    border-radius: 0.5rem;
+    right: 25%;
+    left: auto;
+  }
+  .usage-left-popup::after {
+    content: "";
+    border-top: transparent;
+  }
+  .usage-container {
+    width: 100%;
+    height: 9rem;
+  }
 }
